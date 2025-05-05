@@ -1,0 +1,6 @@
+pandas
+nltk
+psycopg2
+sqlalchemy
+sentence-transformers
+textblob
