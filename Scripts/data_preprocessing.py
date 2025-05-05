@@ -37,12 +37,12 @@ def preprocess(text):
     # بازسازی متن
     return ' '.join(tokens)
 
-df = pd.read_csv("Scripts/Musical_instruments_reviews.csv")
+df = pd.read_csv("Data/Musical_instruments_reviews.csv")
 df["cleaned_review"] = df["reviewText"].apply(preprocess)
 df["cleaned_summary"] = df["summary"].apply(preprocess)
 # print(df[["summary", "cleaned_summary"]].head(5))
 
 # creating new  an d cleaned csv file:
-df.to_csv("Scripts/Dataset_cleaned.csv", index=False)
+df.to_csv("Data/Dataset_cleaned.csv", index=False)
 
 print("✅ data preprocessing DONE")
