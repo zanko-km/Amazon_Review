@@ -12,7 +12,7 @@ conn = psycopg2.connect(
 cursor = conn.cursor()
 
 # خواندن فایل CSV
-df = pd.read_csv("Scripts/Dataset_cleaned.csv")
+df = pd.read_csv("Data/Dataset_cleaned.csv")
 
 # تبدیل داده‌ها و درج در جداول
 for index, row in df.iterrows():
