@@ -18,4 +18,5 @@ docker build -t pipeline .
 docker run --network host -it pipeline-image /bin/bash
 sed -i 's/DB_HOST = "localhost"/DB_HOST = "host.docker.internal"/' scripts/db.py
 sed -i 's/host="localhost",/host="host.docker.internal",/' scripts/import_to_db.py
+python pipeline.py
 ```
